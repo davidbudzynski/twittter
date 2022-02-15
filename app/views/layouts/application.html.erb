@@ -11,6 +11,24 @@
   </head>
 
   <body>
+    <% if flash[:notice] %>
+      <div class="notification">
+        <button class="delete"></button>
+        <p class="notice">
+          <%= notice %>
+        </p>
+      </div>
+    <% end %>
+
+    <% if flash[:altert] %>
+      <div class="notification is-danger">
+        <button class="delete"></button>
+        <p class="alert">
+          <%= alert %>
+        </p>
+      </div>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
